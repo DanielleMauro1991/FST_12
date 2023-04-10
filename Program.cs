@@ -1,17 +1,17 @@
 ﻿using System;
-
 using Sistema_UC12.Classes;
 
-internal class NewBaseType
+class Program
 {
-    static void Main(string[] args)
-    {
-        Pessoa novaPessoa = new Pessoa();
-        novaPessoa.endereco = "rua niterou,1801";
-        novaPessoa.nome = "Caique";
-        novaPessoa.enderecoComercial = true;
+    static void Main(string[] args) //Atalho svm + Enter
+{
 
-        Console.WriteLine(novaPessoa.nome);
-    }
+PessoaFisica Caique = new PessoaFisica ();
+Caique.Nome = "Caique";
+
+Console.WriteLine(Caique.Nome);
+
+}
+
 }
 
