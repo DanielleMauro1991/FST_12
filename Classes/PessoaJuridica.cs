@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sistema_UC12.Classes
 
 {
-    public class PessoaJuridica
+    public class PessoaJuridica : Pessoa
     {
         public string cnpj { get; set; }
 

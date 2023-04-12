@@ -8,7 +8,7 @@ namespace Sistema_UC12.Classes
 
 {
 
-public class PessoaFisica
+public class PessoaFisica : Pessoa //Utilizar : para que as instâncias tenham acesso à todos os atributos da classe Pessoa
 {
     public string cpf { get; set; }
 
