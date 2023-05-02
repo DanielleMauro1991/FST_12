@@ -1,10 +1,17 @@
 ﻿using System;
+using Sistema_UC12;
 using Sistema_UC12.Classes;
 
 class Program
 {
     static void Main(string[] args) //Atalho svm + Enter
 {
+ 
+ Console.WriteLine("texto");
+
+}
+
+}
 
 //Endereco end = new Endereco ();
 
@@ -43,7 +50,25 @@ class Program
   //  Console.WriteLine ($"{novapf.Nome} é menor de idade");
 //}
 
-}
+//PessoaJuridica novapj = new PessoaJuridica ();
 
-}
+//novapj.endereco = end;
+//novapj.Nome = "SENAI";
+//novapj.RazaoSocial = "Empresa";
+//novapj.cnpj = "02518838990001";
+
+//if (novapj.ValidarCNPJ(novapj.cnpj)){
+
+  //Console.WriteLine ("CNPJ Válido");
+  
+  //}else{
+
+    //Console.WriteLine ("CNPJ Inválido");
+  //}
+  //}
+//}
+
+
+
+
 
