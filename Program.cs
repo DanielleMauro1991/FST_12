@@ -7,7 +7,13 @@ class Program
     static void Main(string[] args) //Atalho svm + Enter
 {
  
- Console.WriteLine(@$"  ♥ OLÁÁÁÁÁ");
+ Console.Clear(); //Comando necessário para o menu em cores
+ Console.ForegroundColor = ConsoleColor.Magenta;
+ Console.BackgroundColor = ConsoleColor.DarkBlue;
+
+ Console.WriteLine(@$"OLÁ MUNDO!");
+
+ Console.ResetColor();// Comando necessário para que o console não saia na cor do menu
 
 }
 
