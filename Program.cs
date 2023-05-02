@@ -9,9 +9,18 @@ class Program
  
  Console.Clear(); //Comando necessário para o menu em cores
  Console.ForegroundColor = ConsoleColor.Magenta;
- Console.BackgroundColor = ConsoleColor.DarkBlue;
+ //Console.BackgroundColor = ConsoleColor.DarkBlue;
 
- Console.WriteLine(@$"OLÁ MUNDO!");
+ Console.WriteLine($"Seja bem vindo ao cadastro de pessoa física ou jurídica.");
+
+ Console.WriteLine("Iniciando ");
+ Thread.Sleep(500); //Cronômetro para barra de carregamento
+
+//Comando para simular carregamento
+ for(var contador = 0; contador < 10; contador++){
+  Console.Write("▌ ");
+  Thread.Sleep(500);
+   }
 
  Console.ResetColor();// Comando necessário para que o console não saia na cor do menu
 
