@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Data;
+using System;
 using Sistema_UC12;
 using Sistema_UC12.Classes;
 
@@ -6,21 +7,70 @@ class Program
 {
     static void Main(string[] args) //Atalho svm + Enter
 {
+
  
- Console.Clear(); //Comando necessário para o menu em cores
- Console.ForegroundColor = ConsoleColor.Magenta;
- //Console.BackgroundColor = ConsoleColor.DarkBlue;
+ void BarraCarregamento(string textocarregamento){ //Comando para simular carregamento
+  
+  Console.WriteLine(textocarregamento);
+  Thread.Sleep(500); //Cronômetro para barra de carregamento
 
- Console.WriteLine($"Seja bem vindo ao cadastro de pessoa física ou jurídica.");
-
- Console.WriteLine("Iniciando ");
- Thread.Sleep(500); //Cronômetro para barra de carregamento
-
-//Comando para simular carregamento
  for(var contador = 0; contador < 10; contador++){
   Console.Write("▌ ");
   Thread.Sleep(500);
    }
+ }
+
+ Console.Clear(); //Comando necessário para o menu em cores
+ Console.ForegroundColor = ConsoleColor.Magenta;
+ //Console.BackgroundColor = ConsoleColor.DarkBlue;
+
+ Console.WriteLine(@$"
+ Seja Bem Vindo ao Cadastro de Clientes.
+ ");
+
+BarraCarregamento("Iniciando");
+
+Console.Clear();
+
+string opcao;
+
+do{ //Faça isso, enquanto a condição for verdadeira
+
+Console.WriteLine(@$"
+ Escolha uma das opções abaixo:
+
+ 1 - Pessoa Física;
+
+ 2 - Pessoa Jurídica;
+
+ 0 - Sair;
+ ");
+
+ opcao = Console.ReadLine(); //Programa irá receber comando do usuário
+
+switch(opcao){
+
+  case "1":
+  Console.WriteLine("Pessoa Física");
+  break;
+
+  
+  case "2":
+  Console.WriteLine("Pessoa Jurídica");
+  break;
+  
+  case "0":
+  Console.WriteLine("Obrigado! Volte sempre!");
+ 
+  BarraCarregamento ("Finalizando");
+
+  break;
+  
+  default:
+  Console.WriteLine("Opção Inválida");
+  break;
+}
+} while (opcao != "0");
 
  Console.ResetColor();// Comando necessário para que o console não saia na cor do menu
 
