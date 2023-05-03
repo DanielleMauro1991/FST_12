@@ -51,12 +51,60 @@ Console.WriteLine(@$"
 switch(opcao){
 
   case "1":
-  Console.WriteLine("Pessoa Física");
+  Endereco end = new Endereco ();
+
+  end.logradouro = "Rua Niterói";
+  end.numero = 180;
+  end.complemento = "Escola SENAI";
+  end.enderecoComercial = true;
+
+  PessoaFisica novapf = new PessoaFisica ();
+
+  novapf.cpf = "080.733.239-90";
+  novapf.endereco = end;
+  novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
+  novapf.Nome = "Ygor Andrade";
+  
+  Console.WriteLine($"O endereço do {novapf.Nome} é {novapf.endereco.logradouro}, nº {novapf.endereco.numero}.");
+  
+  bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
+
+  if (idadeValidade == true){
+  Console.WriteLine ($"{novapf.Nome} é maior de idade");
+  }else{
+  Console.WriteLine ($"{novapf.Nome} é menor de idade");
+  }
+
   break;
 
-  
+ 
   case "2":
-  Console.WriteLine("Pessoa Jurídica");
+  Endereco endereconovo = new Endereco ();
+
+  endereconovo.logradouro = "Rua Niterói";
+  endereconovo.numero = 180;
+  endereconovo.complemento = "Escola SENAI";
+  endereconovo.enderecoComercial = true;
+
+ PessoaJuridica novapj = new PessoaJuridica ();
+
+
+novapj.endereco = endereconovo;
+novapj.Nome = "SENAI";
+novapj.RazaoSocial = "Empresa";
+novapj.cnpj = "02518838990001";
+
+if (novapj.ValidarCNPJ(novapj.cnpj)){
+
+Console.WriteLine ("CNPJ Válido");
+  
+}else{
+
+Console.WriteLine ("CNPJ Inválido");
+}
+  
+Console.WriteLine($"O endereço do {novapj.cnpj} é {novapj.endereco.logradouro}, nº {novapj.endereco.numero}.");
+
   break;
   
   case "0":
@@ -78,18 +126,7 @@ switch(opcao){
 
 }
 
-//Endereco end = new Endereco ();
 
-//end.logradouro = "Rua Niterói";
-//end.numero = 180;
-//end.complemento = "Escola SENAI";
-//end.enderecoComercial = true;
-
-//PessoaFisica novapf = new PessoaFisica ();
-//novapf.cpf = "080.733.239-90";
-//novapf.endereco = end;
-//novapf.DataNascimento = new DateTime (1991,06,16); //Padrão americano= Ano; mês; dia
-//novapf.Nome = "Ygor Andrade";
 
 //Console.WriteLine (novapf.endereco.logradouro);
 //Console.WriteLine (novapf.endereco.numero);
@@ -107,31 +144,9 @@ switch(opcao){
 
 //Console.WriteLine ("O endereço do "+ novapf.Nome + " é " + novapf.endereco.logradouro + ", nº " + novapf.endereco.numero +".");
 
-//bool idadeValidade = novapf.ValidarDataNascimento (novapf.DataNascimento);
 
-//if (idadeValidade == true){
-  //  Console.WriteLine ($"{novapf.Nome} é maior de idade");
-//}else{
-  //  Console.WriteLine ($"{novapf.Nome} é menor de idade");
-//}
 
-//PessoaJuridica novapj = new PessoaJuridica ();
 
-//novapj.endereco = end;
-//novapj.Nome = "SENAI";
-//novapj.RazaoSocial = "Empresa";
-//novapj.cnpj = "02518838990001";
-
-//if (novapj.ValidarCNPJ(novapj.cnpj)){
-
-  //Console.WriteLine ("CNPJ Válido");
-  
-  //}else{
-
-    //Console.WriteLine ("CNPJ Inválido");
-  //}
-  //}
-//}
 
 
 
